@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define KERNEL_FORMAT     "[تطبيق]"
+#define KERNEL_FORMAT     "[نواة]"
 #define KERNEL_LOAD_BASE  0x100000ULL
 
 typedef struct
@@ -42,9 +42,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *out = fopen("النواة.تطبيق", "wb");
+    FILE *out = fopen("شاهين.نواة", "wb");
     if (!out) {
-        fprintf(stderr, "[ERROR] لا يمكن إنشاء النواة.تطبيق\n");
+        fprintf(stderr, "[ERROR] لا يمكن إنشاء شاهين.نواة\n");
         fclose(in);
         return 1;
     }
@@ -73,6 +73,6 @@ int main(int argc, char *argv[])
     fclose(in);
     fclose(out);
 
-    printf("[maker] النواة.تطبيق تم إنشاؤها بنجاح\n");
+    printf("[maker] شاهين.نواة تم إنشاؤها بنجاح\n");
     return 0;
 }
